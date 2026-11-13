@@ -48,9 +48,12 @@ a{color:var(--accent)}
 /* ============ ШАПКА ============ */
 header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:30px;padding:18px 0}
-.logo{font-family:"Unbounded";font-weight:700;font-size:16px;letter-spacing:2.5px;margin-right:auto;text-transform:uppercase}
-.logo::before{content:"";display:inline-block;width:11px;height:11px;border-radius:2px;background:linear-gradient(135deg,var(--accent),var(--accent2));margin-right:10px;transform:rotate(45deg)}
-.logo b{color:var(--accent);font-weight:700}
+.logo{display:flex;align-items:center;gap:11px;margin-right:auto;font-family:"Unbounded";font-weight:700;font-size:19px;letter-spacing:1px;white-space:nowrap}
+.lg-mark{width:14px;height:14px;border-radius:3px;background:linear-gradient(135deg,var(--accent),var(--accent2));transform:rotate(45deg);box-shadow:0 0 16px color-mix(in srgb,var(--accent) 60%,transparent);flex:none}
+.logo .lg-1{color:var(--text);opacity:.85;font-weight:600}
+.logo b{background:linear-gradient(90deg,var(--accent) 10%,var(--accent2) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;font-size:22px;margin:0 3px}
+.lg-ltd{font-size:10px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 6px;letter-spacing:2px;margin-left:7px}
+@media(max-width:560px){.logo{font-size:15px;gap:8px}.logo b{font-size:17px}.lg-ltd{display:none}}
 .nav a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;position:relative}
 .nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent);transition:width .25s}
 .nav a:hover::after{width:100%}
@@ -138,7 +141,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 <body data-theme="graphite">
 
 <header><div class="wrap nav">
-  <div class="logo">NOWROZUDDIN <b>ZAZAI</b> LTD</div>
+  <div class="logo"><span class="lg-mark"></span><span class="lg-1">NOWROZUDDIN</span><b>ZAZAI</b><span class="lg-ltd">LTD</span></div>
   <a href="#about">О компании</a>
   <a href="#product">Продукция</a>
   <a href="#why">Преимущества</a>
